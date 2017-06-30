@@ -1,0 +1,45 @@
+calcimpl class:
+This about whole implantation of calculator
+
+
+package Calculatorapp;
+import Calculatorapp.Calculatorprovider;
+
+/**
+ *
+ * @author Veerendra
+ */
+public class CalcImpl {
+    /**
+	 * @Method calculate provide the calculate and provide the result based on the operator
+	 *         given by user.
+	 * @param opcode
+	 * @param op1
+	 * @param op2
+	 * @return long, provides the calculated result
+	 */
+	public long calculate(String opCode, long op1, long op2) {
+		System.out.println("CalcImpl.calculate(): "+opCode+" "+op1+" "+op2);
+		if(opCode.equals("-"))
+			return op1 - op2 ;
+		if(opCode.equals("+"))
+			return op1 + op2;
+		if(opCode.equals("*"))
+			return op1 * op2;
+		if(opCode.equals("/"))
+			return op1 / op2;
+		
+		return 0;
+	}
+	
+	/**
+	 * @Method exit
+	 * @return long
+	 */
+	public long exit() {
+		System.out.println("CalcImpl.exit()");
+		return 0;
+	}
+
+    
+}
